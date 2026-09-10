@@ -4,7 +4,10 @@ GitHub repository for the paper:
 
 **"A 4200-hour HyperFlash and ÉCLAT campaign on the hyperactive FRB 20240114A: constraining energetics with the most brilliant bursts"**
 This repository contains the scripts and databases used to generate the plots and results presented in [Ould-Boukattine+2026](https://arxiv.org/abs/2605.18513).
-The data are hosted on Zenodo and can be retrieved [here](https://doi.org/10.5281/zenodo.20185181).
+
+## Data
+
+The data are hosted on Zenodo and can be retrieved [here](https://doi.org/10.5281/zenodo.20185181). Not all raw data could be shared due to file size limitations. Each raw voltage data snippet is approximately 3 GB in size and 10 seconds long. As examples, the STROOP burst (the most energetic burst in our sample), as well as single-burst snippets from Onsala, Toruń, and the Bright P-band observations, are uploaded to Zenodo under `/vdif_burst_snippets`. If you require additional raw voltage burst snippets, please contact the PIs or the programme manager of the AstroFlash team. The Zenodo package also contains the `.csv` files and additional intermediate filterbank products.
 
 ## Software
 
