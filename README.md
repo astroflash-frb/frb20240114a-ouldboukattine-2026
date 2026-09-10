@@ -8,8 +8,7 @@ The data are hosted on Zenodo and can be retrieved [here](https://doi.org/10.528
 
 ## Software
 
-The pipeline used to process and search the baseband/VDIF data can be found at [frb-baseband](https://github.com/pharaofranz/frb-baseband). The software used to transfer the radio data can be found at [jive5ab](https://github.com/jive-vlbi/jive5ab).
-The burst searcher software is [Heimdall](https://sourceforge.net/projects/heimdall-astro/). The burst classifier software [FETCH](https://github.com/devanshkv/fetch) can be found here. The pulsar processing package [DSPSR](https://sourceforge.net/projects/dspsr/) is hosted here, and [SIGPROC](https://github.com/SixByNine/sigproc) can be retrieved here.
+The pipeline used to process and search the baseband/VDIF data is [frb-baseband](https://github.com/pharaofranz/frb-baseband), while [jive5ab](https://github.com/jive-vlbi/jive5ab) is used to transfer the radio data. The burst searcher is [Heimdall](https://sourceforge.net/projects/heimdall-astro/), and the burst classifier is [FETCH](https://github.com/devanshkv/fetch). The pulsar processing packages used in the analysis are [DSPSR](https://sourceforge.net/projects/dspsr/) and [SIGPROC](https://github.com/SixByNine/sigproc).
 
 ## Files
 
