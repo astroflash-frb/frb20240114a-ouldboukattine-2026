@@ -11,7 +11,7 @@ The data are hosted on Zenodo and can be retrieved [here](https://doi.org/10.528
 
 ## Software
 
-The pipeline used to process and search the baseband/VDIF data is [frb-baseband](https://github.com/pharaofranz/frb-baseband), while [jive5ab](https://github.com/jive-vlbi/jive5ab) is used to transfer the radio data. The burst searcher is [Heimdall](https://sourceforge.net/projects/heimdall-astro/), and the burst classifier is [FETCH](https://github.com/devanshkv/fetch). The pulsar processing packages used in the analysis are [DSPSR](https://sourceforge.net/projects/dspsr/) and [SIGPROC](https://github.com/SixByNine/sigproc).
+The pipeline used to process and search the baseband/VDIF data is [frb-baseband](https://github.com/pharaofranz/frb-baseband), while [jive5ab](https://github.com/jive-vlbi/jive5ab) is used to transfer the radio data. The burst searcher is [Heimdall](https://sourceforge.net/projects/heimdall-astro/), and the burst classifier is [FETCH](https://github.com/devanshkv/fetch). The pulsar processing packages used in the analysis are [DSPSR](https://sourceforge.net/projects/dspsr/) and [SIGPROC](https://github.com/SixByNine/sigproc). The specific SFXC branch used in this analysis is the [SFXC-phased-array-branch](https://github.com/aardk/sfxc/tree/phased-array). For information on how to use this branch, please contact the AstroFlash team.
 
 ## Files
 
