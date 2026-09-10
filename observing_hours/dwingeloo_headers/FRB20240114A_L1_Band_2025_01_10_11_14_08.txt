@@ -1,0 +1,36 @@
+
+1: From the SIGPROC filterbank file './2025-01-10/L1_Band/FRB20240114A_L1_Band_2025_01_10_11_14_08.fil':
+                  Telescope = Effelsberg
+                Source Name = FRB20240114A
+            Obs Date String = 2025-01-10T10:14:09
+             MJD start time = 60685.42649305555096
+                   RA J2000 = 21:27:40.9011
+             RA J2000 (deg) = 321.920421319528 
+                  Dec J2000 = 04:19:48.9994
+            Dec J2000 (deg) = 4.33027760831191 
+                  Tracking? = True
+              Azimuth (deg) = -60.72565
+           Zenith Ang (deg) = 64.56396
+            Number of polns = 2 (summed)
+           Sample time (us) = 198.4            
+         Central freq (MHz) = 1250.15625       
+          Low channel (MHz) = 1200.3125        
+         High channel (MHz) = 1300             
+        Channel width (MHz) = 0.3125           
+         Number of channels = 320
+      Total Bandwidth (MHz) = 100              
+                       Beam = 1 of 1
+            Beam FWHM (deg) = 0.165
+         Spectra per subint = 2400
+           Spectra per file = 2324038
+      Time per subint (sec) = 0.47616
+        Time per file (sec) = 461.0891392
+            bits per sample = 32
+          bytes per spectra = 1280
+        samples per spectra = 320
+           bytes per subint = 3072000
+         samples per subint = 768000
+                zero offset = 0                
+           Invert the band? = False
+       bytes in file header = 327
+

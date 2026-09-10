@@ -1,0 +1,368 @@
+VEX_rev = 1.5;
+*    SCHED vers: Release 11.7; June 2022
+*    VEX/SCHED:  1.5.88
+*    Other versions: Sched:  11.7  Plot: 1.06  JPL-ephem: 1.01
+*------------------------------------------------------------------------------
+$GLOBAL;
+     ref $EXPER = rn1l40;
+*                                                      +------------+
+*                         PI revision number:          |    1.0000  |
+*                                                      +------------+
+*    mode:       R240121 monitoring - L-band (21cm) at 1 Gbit/s - group A
+*------------------------------------------------------------------------------
+$EXPER;
+*
+def rn1l40;
+     exper_name = rn1l40;
+     exper_description = "No description given.";
+     PI_name = WP;
+     PI_email = motylek@astro.umk.pl;
+*    address:   IAUMK
+*                
+*                
+*                
+*    phone:     +48 605463363
+*    during obs:+48 00000000
+*    fax:       +48 00000000
+*               PCAL off
+*               AGC off, cont_cal OFF
+*
+*    year, doy: 2024, 277
+*    date     : Thu  3 Oct 2024
+*    MJD      : 60586
+     exper_nominal_start=2024y277d19h30m00s;
+     exper_nominal_stop=2024y277d23h55m55s;
+*
+     target_correlator = JIVE;
+*
+*    integr_time    :     2.000 s
+*    number_channels:     3
+*    number_antenna :  6
+*    cross_polarize : Yes
+*    weight_func    : UNIFORM
+*    distrib_medium : FTP
+*    distrib_format : FITS
+*    source_pos_cat : FROM CHEDULE
+*    distribute_to  : 
+*                     IAUMK
+*                     IAUMK
+*                     IAUMK
+*    corr_notes : 
+*               SFXC correlator with gating
+*
+enddef;
+*------------------------------------------------------------------------------
+$MODE;
+*
+def TR_LA;
+     ref $PROCEDURES = Mode_01;
+     ref $FREQ = 1396.00MHz16x16MHz:Tr;
+     ref $IF = LO@2130MHzDPolNoTone:Tr;
+     ref $BBC = 16BBCs:Tr;
+     ref $TRACKS = VDIF.16Ch2bit1to1:Tr;
+*    ref $HEAD_POS = DiskVoid <= obsolete definition
+     ref $ROLL = NoRoll:Tr;
+*    ref $PASS_ORDER = DiskVoid <= obsolete definition
+     ref $PHASE_CAL_DETECT = NoDetect:Tr;
+enddef;
+*------------------------------------------------------------------------------
+$STATION;
+*
+def Tr;
+     ref $SITE = TORUN;
+     ref $ANTENNA = TORUN;
+     ref $DAS = 2DBBC+NONE<;
+enddef;
+*------------------------------------------------------------------------------
+$PROCEDURES;
+*
+def Mode_01;
+     procedure_name_prefix =  "01";
+     tape_change =  420 sec;
+     headstack_motion =    6 sec;
+     new_source_command =    5 sec;
+     new_tape_setup =   20 sec;
+     setup_always = on :  20 sec;
+     parity_check = off : 100 sec;
+     tape_prepass = off : 600 sec;
+     preob_cal  = on :  10 sec : preob;
+     midob_cal  = on :  15 sec : midob;
+     postob_cal = on :   0 sec : postob;
+enddef;
+*------------------------------------------------------------------------------
+$SITE;
+*
+def TORUN;
+     site_type = fixed;
+     site_name = TORUN;
+     site_ID = Tr;
+*    elev=  133.61 long=-018:33:50. lat= 53:05:43.7
+     site_position = 3638558.51000 m: 1221969.72000 m: 5077036.76000 m;
+     site_velocity = -0.016010   m/yr:  0.016450   m/yr:  0.007520  m/yr;
+*    First line below is VEX standard format.  Use only when readers are ready.
+*    site_position_epoch = 1997y001d;
+     site_position_epoch =   50449;
+     horizon_map_az =  0.0 deg:360.0;
+     horizon_map_el =  2.0 deg:  2.0;
+enddef;
+*------------------------------------------------------------------------------
+$ANTENNA;
+*
+def TORUN;
+     axis_type = az : el;
+     antenna_motion = el :  16.0 deg/min :  5 sec;  *    0.030 deg/sec/sec
+     antenna_motion = az :  30.0 deg/min :  5 sec;  *    0.050 deg/sec/sec
+     axis_offset =    0.00000 m;
+enddef;
+*------------------------------------------------------------------------------
+$DAS;
+*
+def 2DBBC+NONE<;
+     record_transport_type = Mark5C;
+     electronics_rack_type = DBBC;
+     number_drives = 2;
+     headstack = 1 :            : 0 ;
+     headstack = 2 :            : 1 ;
+     tape_motion = adaptive : 0 min: 0 min: 10 sec;
+enddef;
+*------------------------------------------------------------------------------
+$SOURCE;
+*
+def R240121;
+     source_name = R240121;
+*    this source had calibrator code:  
+     ra = 21h27m39.8880000s; dec =  04d21'00.360000"; ref_coord_frame = J2000;
+*    ra = 21h25m09.1824044s; dec =  04d07'54.959111"; ref_coord_frame = B1950;
+*    ra = 21h28m55.0437558s; dec =  04d27'34.026464"; ref_coord_frame = Date;
+*    velocity_wrt_LSR =       0.00 km/sec; * warning, only given here for 1st channel
+*    calculations used radio definition 
+enddef;
+*
+def B1929+10;
+     source_name = B1929+10;
+*    this source had calibrator code:  
+     ra = 19h32m14.0000000s; dec =  10d59'33.400000"; ref_coord_frame = J2000;
+*    ra = 19h29m52.1185395s; dec =  10d53'05.643161"; ref_coord_frame = B1950;
+*    ra = 19h33m24.2329211s; dec =  11d02'50.979116"; ref_coord_frame = Date;
+*    velocity_wrt_LSR =       0.00 km/sec; * warning, only given here for 1st channel
+*    calculations used radio definition 
+enddef;
+*
+def B1953+50;
+     source_name = B1953+50;
+*    this source had calibrator code:  
+     ra = 19h55m18.7600000s; dec =  50d59'55.290000"; ref_coord_frame = J2000;
+*    ra = 19h53m57.1800157s; dec =  50d51'54.742369"; ref_coord_frame = B1950;
+*    ra = 19h55m59.1665727s; dec =  51d04'05.318871"; ref_coord_frame = Date;
+*    velocity_wrt_LSR =       0.00 km/sec; * warning, only given here for 1st channel
+*    calculations used radio definition 
+enddef;
+*------------------------------------------------------------------------------
+$FREQ;
+*
+def 1396.00MHz16x16MHz;
+* mode =  1    stations =Tr
+     sample_rate =    32.000 Ms/sec;  * (2bits/sample)
+     chan_def = :  1396.00 MHz : L :  16.00 MHz : &CH01 : &BBC01 : &NoCal; *Rcp
+     chan_def = :  1396.00 MHz : L :  16.00 MHz : &CH02 : &BBC09 : &NoCal; *Lcp
+     chan_def = :  1396.00 MHz : U :  16.00 MHz : &CH03 : &BBC01 : &NoCal; *Rcp
+     chan_def = :  1396.00 MHz : U :  16.00 MHz : &CH04 : &BBC09 : &NoCal; *Lcp
+     chan_def = :  1428.00 MHz : L :  16.00 MHz : &CH05 : &BBC02 : &NoCal; *Rcp
+     chan_def = :  1428.00 MHz : L :  16.00 MHz : &CH06 : &BBC10 : &NoCal; *Lcp
+     chan_def = :  1428.00 MHz : U :  16.00 MHz : &CH07 : &BBC02 : &NoCal; *Rcp
+     chan_def = :  1428.00 MHz : U :  16.00 MHz : &CH08 : &BBC10 : &NoCal; *Lcp
+     chan_def = :  1460.00 MHz : L :  16.00 MHz : &CH09 : &BBC03 : &NoCal; *Rcp
+     chan_def = :  1460.00 MHz : L :  16.00 MHz : &CH10 : &BBC11 : &NoCal; *Lcp
+     chan_def = :  1460.00 MHz : U :  16.00 MHz : &CH11 : &BBC03 : &NoCal; *Rcp
+     chan_def = :  1460.00 MHz : U :  16.00 MHz : &CH12 : &BBC11 : &NoCal; *Lcp
+     chan_def = :  1492.00 MHz : L :  16.00 MHz : &CH13 : &BBC04 : &NoCal; *Rcp
+     chan_def = :  1492.00 MHz : L :  16.00 MHz : &CH14 : &BBC12 : &NoCal; *Lcp
+     chan_def = :  1492.00 MHz : U :  16.00 MHz : &CH15 : &BBC04 : &NoCal; *Rcp
+     chan_def = :  1492.00 MHz : U :  16.00 MHz : &CH16 : &BBC12 : &NoCal; *Lcp
+enddef;
+*------------------------------------------------------------------------------
+$IF;
+*
+def LO@2130MHzDPolNoTone;
+* mode =  1    stations =Tr
+     if_def = &IF_A1 : A1 : R :  2130.00 MHz : L ; * PCall off!   0.0   0.0  NA     0 NA
+     if_def = &IF_B1 : B1 : L :  2130.00 MHz : L ; * PCall off!   0.0   0.0  NA     0 NA
+enddef;
+*------------------------------------------------------------------------------
+$BBC;
+*
+def 16BBCs;
+* mode =  1    stations =Tr
+     BBC_assign = &BBC01 :  1 : &IF_A1;
+     BBC_assign = &BBC09 :  9 : &IF_B1;
+     BBC_assign = &BBC02 :  2 : &IF_A1;
+     BBC_assign = &BBC10 : 10 : &IF_B1;
+     BBC_assign = &BBC03 :  3 : &IF_A1;
+     BBC_assign = &BBC11 : 11 : &IF_B1;
+     BBC_assign = &BBC04 :  4 : &IF_A1;
+     BBC_assign = &BBC12 : 12 : &IF_B1;
+enddef;
+*------------------------------------------------------------------------------
+$PHASE_CAL_DETECT;
+*
+def NoDetect;
+* mode =  1    stations =Tr
+     phase_cal_detect = &NoCal;
+enddef;
+*------------------------------------------------------------------------------
+$TRACKS;
+*
+def VDIF.16Ch2bit1to1;
+* mode =  1    stations =Tr
+*    firmware_type = DBBC_DDC;
+*    format = VDIF, and fan-out = 1
+*    mode requires  32.00Mb/s/tr; stations using disks
+     track_frame_format = VDIF5032;
+     fanout_def =   : &CH01 : sign : 1:  1;
+     fanout_def =   : &CH01 :  mag : 1:  1;
+     fanout_def =   : &CH02 : sign : 1:  2;
+     fanout_def =   : &CH02 :  mag : 1:  2;
+     fanout_def =   : &CH03 : sign : 1:  3;
+     fanout_def =   : &CH03 :  mag : 1:  3;
+     fanout_def =   : &CH04 : sign : 1:  4;
+     fanout_def =   : &CH04 :  mag : 1:  4;
+     fanout_def =   : &CH05 : sign : 1:  5;
+     fanout_def =   : &CH05 :  mag : 1:  5;
+     fanout_def =   : &CH06 : sign : 1:  6;
+     fanout_def =   : &CH06 :  mag : 1:  6;
+     fanout_def =   : &CH07 : sign : 1:  7;
+     fanout_def =   : &CH07 :  mag : 1:  7;
+     fanout_def =   : &CH08 : sign : 1:  8;
+     fanout_def =   : &CH08 :  mag : 1:  8;
+     fanout_def =   : &CH09 : sign : 1:  9;
+     fanout_def =   : &CH09 :  mag : 1:  9;
+     fanout_def =   : &CH10 : sign : 1: 10;
+     fanout_def =   : &CH10 :  mag : 1: 10;
+     fanout_def =   : &CH11 : sign : 1: 11;
+     fanout_def =   : &CH11 :  mag : 1: 11;
+     fanout_def =   : &CH12 : sign : 1: 12;
+     fanout_def =   : &CH12 :  mag : 1: 12;
+     fanout_def =   : &CH13 : sign : 1: 13;
+     fanout_def =   : &CH13 :  mag : 1: 13;
+     fanout_def =   : &CH14 : sign : 1: 14;
+     fanout_def =   : &CH14 :  mag : 1: 14;
+     fanout_def =   : &CH15 : sign : 1: 15;
+     fanout_def =   : &CH15 :  mag : 1: 15;
+     fanout_def =   : &CH16 : sign : 1: 16;
+     fanout_def =   : &CH16 :  mag : 1: 16;
+enddef;
+*------------------------------------------------------------------------------
+$HEAD_POS;
+def DiskVoid;
+* mode =  1    stations =Tr
+*     Head positions irrelevant for Disk: empty def
+enddef;
+*------------------------------------------------------------------------------
+$PASS_ORDER;
+*
+def DiskVoid;
+* mode =  1    stations =Tr
+*     Pass orders irrelevant for Disk: empty def
+enddef;
+*------------------------------------------------------------------------------
+$ROLL;
+*
+def NoRoll;
+* mode =  1    stations =Tr
+*    barrel-roll set to 'roll_off', so reverse-roll by  0 (1 head)
+     roll = off;
+enddef;
+*------------------------------------------------------------------------------
+$SCHED;
+* schedule section for experiment rn1l40  
+* No description given.                                                   
+scan No0001;
+     start=2024y277d19h30m00s; mode=TR_LA; source=B1929+10;
+*              :data_good:data_stop:goto_foot: pass:  wrap :driv:tape at
+     station=Tr:    0 sec:  300 sec:    0.000 GB:   :       : 1;
+endscan;
+scan No0002;
+     start=2024y277d19h37m30s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:   38.646 GB:   :       : 1;
+endscan;
+scan No0003;
+     start=2024y277d19h50m00s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:  131.396 GB:   :       : 1;
+endscan;
+scan No0004;
+     start=2024y277d20h02m30s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:  224.145 GB:   :       : 1;
+endscan;
+scan No0005;
+     start=2024y277d20h15m00s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:  316.895 GB:   :       : 1;
+endscan;
+scan No0006;
+     start=2024y277d20h27m30s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:  409.645 GB:   :       : 1;
+endscan;
+scan No0007;
+     start=2024y277d20h40m00s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:  502.395 GB:   :       : 1;
+endscan;
+scan No0008;
+     start=2024y277d20h52m30s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:  595.145 GB:   :       : 1;
+endscan;
+scan No0009;
+     start=2024y277d21h05m00s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:  687.894 GB:   :       : 1;
+endscan;
+scan No0010;
+     start=2024y277d21h17m30s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:  780.644 GB:   :       : 1;
+endscan;
+scan No0011;
+     start=2024y277d21h30m00s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:  873.394 GB:   :       : 1;
+endscan;
+scan No0012;
+     start=2024y277d21h42m30s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec:  966.144 GB:   :       : 1;
+endscan;
+scan No0013;
+     start=2024y277d21h55m00s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec: 1058.894 GB:   :       : 1;
+endscan;
+scan No0014;
+     start=2024y277d22h07m30s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec: 1151.644 GB:   :       : 1;
+endscan;
+scan No0015;
+     start=2024y277d22h20m00s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec: 1244.393 GB:   :       : 1;
+endscan;
+scan No0016;
+     start=2024y277d22h32m30s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec: 1337.143 GB:   :       : 1;
+endscan;
+scan No0017;
+     start=2024y277d22h45m00s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec: 1429.893 GB:   :       : 1;
+endscan;
+scan No0018;
+     start=2024y277d22h57m30s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec: 1522.643 GB:   :       : 1;
+endscan;
+scan No0019;
+     start=2024y277d23h10m00s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec: 1615.392 GB:   :       : 1;
+endscan;
+scan No0020;
+     start=2024y277d23h22m30s; mode=TR_LA; source=R240121;
+     station=Tr:    0 sec:  720 sec: 1708.142 GB:   :       : 1;
+endscan;
+scan No0021;
+     start=2024y277d23h35m00s; mode=TR_LA; source=R240121;
+*              :data_good:data_stop:goto_foot: pass:  wrap :driv:tape at
+     station=Tr:    0 sec:  720 sec: 1800.892 GB:   :       : 1;
+endscan;
+scan No0022;
+     start=2024y277d23h49m55s; mode=TR_LA; source=B1953+50;
+     station=Tr:    0 sec:  360 sec: 1893.642 GB:   :       : 1;
+endscan;

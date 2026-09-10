@@ -1,0 +1,58 @@
+{
+    "number_channels": 128,
+    "cross_polarize": false,
+    "integr_time": 0.256,
+    "sub_integr_time": 64.0,
+    "start": "2024y071d06h37m33s",
+    "stop": "2024y071d06h37m36s",
+    "fft_size_correlation": 128,
+    "fft_size_delaycor": 128,
+    "output_file": "file:///data1/omar/sfxc/frb240114a/p47024_8_o8_60380.27610/dm_opt/p47024_8_64us_500KHz_StokesI_DM52900.cor",
+    "filterbank": true,
+    "pulsars": {
+        "R240114_D": {
+            "polyco_file": "file:///data1/omar/sfxc/frb240114a/frb240114a_loop.polyco", 
+            "no_intra_channel_dedispersion": false,
+            "coherent_dedispersion": true
+        }
+    },
+    "pulsar_binning": false,
+    "normalize": false,
+    "window_function": "NONE",
+    "data_sources": {
+        "O8": [
+            "file:///scratch1/baseband_extractions/r147/onsala/p47024_o8_no0008_60380.27609755_plus-minus_5.0_seconds"
+        ]
+    },
+    "stations": [
+        "O8"
+    ],
+    "channels": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH04",
+        "CH05",
+        "CH06",
+        "CH07",
+        "CH08",
+        "CH09",
+        "CH10",
+        "CH11",
+        "CH12",
+        "CH13",
+        "CH14",
+        "CH15",
+        "CH16"
+    ],
+    "exper_name": "p47024",
+    "delay_directory": "file:///data1/omar/sfxc/frb240114a/p47024_8_o8_60380.27610/dm_opt/",
+    "message_level": 1,
+    "file_parameters": {
+        "O8": {
+            "sources": [
+                "sleipnir:///scratch1/baseband_extractions/r147/onsala/p47024_o8_no0008_60380.27609755_plus-minus_5.0_seconds"
+            ]
+        }
+    }
+}

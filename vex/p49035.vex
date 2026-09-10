@@ -1,0 +1,639 @@
+VEX_rev = 1.5;
+*    SCHED vers: Development version 11.5. Started Apr. 2
+*    VEX/SCHED:  1.5.87
+*    Other versions: Sched:  11.5  Plot: 1.06  JPL-ephem: 0.00
+*------------------------------------------------------------------------------
+$GLOBAL;
+     ref $EXPER = p49035;
+*                                                      +------------+
+*                         PI revision number:          |    1.0000  |
+*                                                      +------------+
+*    mode:       Non-Repeater CHIME monitoring with Westerbork
+*------------------------------------------------------------------------------
+$EXPER;
+*
+def p49035;
+     exper_name = p49035;
+     exper_description = "No description given.";
+     PI_name = "Omar Ould-Boukattine";
+     PI_email = o.s.ouldboukattine@uva.nl;
+*    address:   ASTRON
+*                
+*                
+*                
+*    phone:     0521-595-100
+*    during obs: 
+*    fax:        
+*               PCAL off
+*               AGC off, cont_cal OFF
+*
+*    year, doy: 2025,  22
+*    date     : Wed 22 Jan 2025
+*    MJD      : 60697
+     exper_nominal_start=2025y022d10h00m00s;
+     exper_nominal_stop=2025y023d07h20m46s;
+*
+     target_correlator = JIVE;
+*
+*    integr_time    :     2.000 s
+*    number_channels:    32
+*    number_antenna :  6
+*    cross_polarize : Yes
+*    weight_func    : UNIFORM
+*    distrib_medium : FTP
+*    distrib_format : FITS
+*    source_pos_cat : FROM SCHEDULE
+*    distribute_to  : 
+*                     Onsala Space Observatory
+*                     Onsala
+*                     Sweden
+*    corr_notes : 
+*               SFXC correlator with gating
+*
+enddef;
+*------------------------------------------------------------------------------
+$MODE;
+*
+def MIX_BAND1;
+     ref $PROCEDURES = Mode_01;
+     ref $FREQ = 1376.00MHz16x16MHz:O8;
+     ref $IF = LO@708MHzDPolNoTone:O8;
+     ref $BBC = 16BBCs:O8;
+     ref $TRACKS = VDIF.16Ch2bit1to1:O8;
+*    ref $HEAD_POS = DiskVoid <= obsolete definition
+     ref $ROLL = NoRoll:O8;
+*    ref $PASS_ORDER = DiskVoid <= obsolete definition
+     ref $PHASE_CAL_DETECT = NoDetect:O8;
+enddef;
+*------------------------------------------------------------------------------
+$STATION;
+*
+def O8;
+     ref $SITE = ONSALA85;
+     ref $ANTENNA = ONSALA85;
+     ref $DAS = 2DBBC+NONE<;
+enddef;
+*------------------------------------------------------------------------------
+$PROCEDURES;
+*
+def Mode_01;
+     procedure_name_prefix =  "01";
+     tape_change =  420 sec;
+     headstack_motion =    6 sec;
+     new_source_command =    5 sec;
+     new_tape_setup =   20 sec;
+     setup_always = on :  20 sec;
+     parity_check = off : 100 sec;
+     tape_prepass = off : 600 sec;
+     preob_cal  = on :  10 sec : preob;
+     midob_cal  = on :  15 sec : midob;
+     postob_cal = on :   0 sec : postob;
+enddef;
+*------------------------------------------------------------------------------
+$SITE;
+*
+def ONSALA85;
+     site_type = fixed;
+     site_name = ONSALA85;
+     site_ID = O8;
+*    elev=   58.47 long=-011:55:04. lat= 57:23:35.1
+     site_position = 3370965.87870 m:  711466.19780 m: 5349664.20060 m;
+     site_velocity = -0.014360   m/yr:  0.014530   m/yr:  0.010520  m/yr;
+*    First line below is VEX standard format.  Use only when readers are ready.
+*    site_position_epoch = 2014y001d;
+     site_position_epoch =   56658;
+enddef;
+*------------------------------------------------------------------------------
+$ANTENNA;
+*
+def ONSALA85;
+     axis_type = ha : dec;
+     antenna_motion = dec :  14.7 deg/min :  5 sec;  *    0.052 deg/sec/sec
+     antenna_motion = ha :  17.6 deg/min :  5 sec;  *    0.070 deg/sec/sec
+     axis_offset =    2.15000 m;
+enddef;
+*------------------------------------------------------------------------------
+$DAS;
+*
+def 2DBBC+NONE<;
+     record_transport_type = Mark5C;
+     electronics_rack_type = DBBC;
+     number_drives = 2;
+     headstack = 1 :            : 0 ;
+     headstack = 2 :            : 1 ;
+     tape_motion = adaptive : 0 min: 0 min: 10 sec;
+enddef;
+*------------------------------------------------------------------------------
+$SOURCE;
+*
+def B1133+16_D;
+     source_name = B1133+16_D;
+*    this source had calibrator code:  
+     ra = 11h36m03.1000000s; dec =  15d51'14.100000"; ref_coord_frame = J2000;
+*    ra = 11h33m27.2369010s; dec =  16d07'50.038249"; ref_coord_frame = B1950;
+*    ra = 11h37m22.1605115s; dec =  15d42'46.295062"; ref_coord_frame = Date;
+enddef;
+*
+def B0329+54_D;
+     source_name = B0329+54_D;
+*    this source had calibrator code:  
+     ra = 03h32m59.3680000s; dec =  54d34'43.570000"; ref_coord_frame = J2000;
+*    ra = 03h29m11.0663078s; dec =  54d24'37.476970"; ref_coord_frame = B1950;
+*    ra = 03h34m54.8402392s; dec =  54d40'02.401430"; ref_coord_frame = Date;
+enddef;
+*
+def B1933+16_D;
+     source_name = B1933+16_D;
+*    this source had calibrator code:  
+     ra = 19h35m47.8000000s; dec =  16d16'39.900000"; ref_coord_frame = J2000;
+*    ra = 19h33m31.8143304s; dec =  16d09'57.634265"; ref_coord_frame = B1950;
+*    ra = 19h36m54.4854481s; dec =  16d19'52.102633"; ref_coord_frame = Date;
+enddef;
+*
+def R3_D;
+     source_name = R3_D;
+*    this source had calibrator code:  
+     ra = 01h58m00.7495000s; dec =  65d43'00.318500"; ref_coord_frame = J2000;
+*    ra = 01h54m15.5383635s; dec =  65d28'24.403434"; ref_coord_frame = B1950;
+*    ra = 01h59m53.6480207s; dec =  65d50'37.858483"; ref_coord_frame = Date;
+enddef;
+*
+def R200120_D;
+     source_name = R200120_D;
+*    this source had calibrator code:  
+     ra = 09h57m54.7030000s; dec =  68d49'01.033000"; ref_coord_frame = J2000;
+*    ra = 09h53m51.5647504s; dec =  69d03'19.528189"; ref_coord_frame = B1950;
+*    ra = 09h59m59.8093290s; dec =  68d41'40.411759"; ref_coord_frame = Date;
+enddef;
+*
+def R240114_D;
+     source_name = R240114_D;
+*    this source had calibrator code:  
+     ra = 21h27m39.8353800s; dec =  04d19'45.634380"; ref_coord_frame = J2000;
+*    ra = 21h25m09.1146865s; dec =  04d06'40.236134"; ref_coord_frame = B1950;
+*    ra = 21h28m54.0702260s; dec =  04d26'12.789060"; ref_coord_frame = Date;
+enddef;
+*------------------------------------------------------------------------------
+$FREQ;
+*
+def 1376.00MHz16x16MHz;
+* mode =  1    stations =O8
+     sample_rate =    32.000 Ms/sec;  * (2bits/sample)
+     chan_def = :  1376.00 MHz : L :  16.00 MHz : &CH01 : &BBC01 : &NoCal; *Rcp
+     chan_def = :  1376.00 MHz : L :  16.00 MHz : &CH02 : &BBC09 : &NoCal; *Lcp
+     chan_def = :  1376.00 MHz : U :  16.00 MHz : &CH03 : &BBC01 : &NoCal; *Rcp
+     chan_def = :  1376.00 MHz : U :  16.00 MHz : &CH04 : &BBC09 : &NoCal; *Lcp
+     chan_def = :  1408.00 MHz : L :  16.00 MHz : &CH05 : &BBC02 : &NoCal; *Rcp
+     chan_def = :  1408.00 MHz : L :  16.00 MHz : &CH06 : &BBC10 : &NoCal; *Lcp
+     chan_def = :  1408.00 MHz : U :  16.00 MHz : &CH07 : &BBC02 : &NoCal; *Rcp
+     chan_def = :  1408.00 MHz : U :  16.00 MHz : &CH08 : &BBC10 : &NoCal; *Lcp
+     chan_def = :  1440.00 MHz : L :  16.00 MHz : &CH09 : &BBC03 : &NoCal; *Rcp
+     chan_def = :  1440.00 MHz : L :  16.00 MHz : &CH10 : &BBC11 : &NoCal; *Lcp
+     chan_def = :  1440.00 MHz : U :  16.00 MHz : &CH11 : &BBC03 : &NoCal; *Rcp
+     chan_def = :  1440.00 MHz : U :  16.00 MHz : &CH12 : &BBC11 : &NoCal; *Lcp
+     chan_def = :  1472.00 MHz : L :  16.00 MHz : &CH13 : &BBC04 : &NoCal; *Rcp
+     chan_def = :  1472.00 MHz : L :  16.00 MHz : &CH14 : &BBC12 : &NoCal; *Lcp
+     chan_def = :  1472.00 MHz : U :  16.00 MHz : &CH15 : &BBC04 : &NoCal; *Rcp
+     chan_def = :  1472.00 MHz : U :  16.00 MHz : &CH16 : &BBC12 : &NoCal; *Lcp
+enddef;
+*------------------------------------------------------------------------------
+$IF;
+*
+def LO@708MHzDPolNoTone;
+* mode =  1    stations =O8
+     if_def = &IF_A1 : A1 : R :   708.00 MHz : U ; * PCall off!   0.0   0.0  NA     0 NA
+     if_def = &IF_C1 : C1 : L :   708.00 MHz : U ; * PCall off!   0.0   0.0  NA     0 NA
+enddef;
+*------------------------------------------------------------------------------
+$BBC;
+*
+def 16BBCs;
+* mode =  1    stations =O8
+     BBC_assign = &BBC01 :  1 : &IF_A1;
+     BBC_assign = &BBC09 :  9 : &IF_C1;
+     BBC_assign = &BBC02 :  2 : &IF_A1;
+     BBC_assign = &BBC10 : 10 : &IF_C1;
+     BBC_assign = &BBC03 :  3 : &IF_A1;
+     BBC_assign = &BBC11 : 11 : &IF_C1;
+     BBC_assign = &BBC04 :  4 : &IF_A1;
+     BBC_assign = &BBC12 : 12 : &IF_C1;
+enddef;
+*------------------------------------------------------------------------------
+$PHASE_CAL_DETECT;
+*
+def NoDetect;
+* mode =  1    stations =O8
+     phase_cal_detect = &NoCal;
+enddef;
+*------------------------------------------------------------------------------
+$TRACKS;
+*
+def VDIF.16Ch2bit1to1;
+* mode =  1    stations =O8
+*    firmware_type = DBBC_DDC;
+*    format = VDIF, and fan-out = 1
+*    mode requires  32.00Mb/s/tr; stations using disks
+     track_frame_format = VDIF5032;
+     fanout_def =   : &CH01 : sign : 1:  1;
+     fanout_def =   : &CH01 :  mag : 1:  1;
+     fanout_def =   : &CH02 : sign : 1:  2;
+     fanout_def =   : &CH02 :  mag : 1:  2;
+     fanout_def =   : &CH03 : sign : 1:  3;
+     fanout_def =   : &CH03 :  mag : 1:  3;
+     fanout_def =   : &CH04 : sign : 1:  4;
+     fanout_def =   : &CH04 :  mag : 1:  4;
+     fanout_def =   : &CH05 : sign : 1:  5;
+     fanout_def =   : &CH05 :  mag : 1:  5;
+     fanout_def =   : &CH06 : sign : 1:  6;
+     fanout_def =   : &CH06 :  mag : 1:  6;
+     fanout_def =   : &CH07 : sign : 1:  7;
+     fanout_def =   : &CH07 :  mag : 1:  7;
+     fanout_def =   : &CH08 : sign : 1:  8;
+     fanout_def =   : &CH08 :  mag : 1:  8;
+     fanout_def =   : &CH09 : sign : 1:  9;
+     fanout_def =   : &CH09 :  mag : 1:  9;
+     fanout_def =   : &CH10 : sign : 1: 10;
+     fanout_def =   : &CH10 :  mag : 1: 10;
+     fanout_def =   : &CH11 : sign : 1: 11;
+     fanout_def =   : &CH11 :  mag : 1: 11;
+     fanout_def =   : &CH12 : sign : 1: 12;
+     fanout_def =   : &CH12 :  mag : 1: 12;
+     fanout_def =   : &CH13 : sign : 1: 13;
+     fanout_def =   : &CH13 :  mag : 1: 13;
+     fanout_def =   : &CH14 : sign : 1: 14;
+     fanout_def =   : &CH14 :  mag : 1: 14;
+     fanout_def =   : &CH15 : sign : 1: 15;
+     fanout_def =   : &CH15 :  mag : 1: 15;
+     fanout_def =   : &CH16 : sign : 1: 16;
+     fanout_def =   : &CH16 :  mag : 1: 16;
+enddef;
+*------------------------------------------------------------------------------
+$HEAD_POS;
+def DiskVoid;
+* mode =  1    stations =O8
+*     Head positions irrelevant for Disk: empty def
+enddef;
+*------------------------------------------------------------------------------
+$PASS_ORDER;
+*
+def DiskVoid;
+* mode =  1    stations =O8
+*     Pass orders irrelevant for Disk: empty def
+enddef;
+*------------------------------------------------------------------------------
+$ROLL;
+*
+def NoRoll;
+* mode =  1    stations =O8
+*    barrel-roll set to 'roll_off', so reverse-roll by  0 (1 head)
+     roll = off;
+enddef;
+*------------------------------------------------------------------------------
+$SCHED;
+* schedule section for experiment p49035  
+* No description given.                                                   
+scan No0001;
+     start=2025y022d10h00m00s; mode=MIX_BAND1; source=B1933+16_D;
+*              :data_good:data_stop:goto_foot: pass:  wrap :driv:tape at
+     station=O8:    0 sec:  300 sec:    0.000 GB:   :       : 1;
+endscan;
+scan No0002;
+     start=2025y022d10h07m10s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec:   38.646 GB:   :       : 1;
+endscan;
+scan No0003;
+     start=2025y022d10h22m22s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec:  154.583 GB:   :       : 1;
+endscan;
+scan No0004;
+     start=2025y022d10h37m34s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec:  270.520 GB:   :       : 1;
+endscan;
+scan No0005;
+     start=2025y022d10h52m46s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec:  386.458 GB:   :       : 1;
+endscan;
+scan No0006;
+     start=2025y022d11h07m58s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec:  502.395 GB:   :       : 1;
+endscan;
+scan No0007;
+     start=2025y022d11h23m10s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec:  618.332 GB:   :       : 1;
+endscan;
+scan No0008;
+     start=2025y022d11h38m22s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec:  734.269 GB:   :       : 1;
+endscan;
+scan No0009;
+     start=2025y022d11h53m34s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec:  850.207 GB:   :       : 1;
+endscan;
+scan No0010;
+     start=2025y022d12h08m46s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec:  966.144 GB:   :       : 1;
+endscan;
+scan No0011;
+     start=2025y022d12h23m58s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 1082.081 GB:   :       : 1;
+endscan;
+scan No0012;
+     start=2025y022d12h39m10s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 1198.018 GB:   :       : 1;
+endscan;
+scan No0013;
+     start=2025y022d12h54m22s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 1313.956 GB:   :       : 1;
+endscan;
+scan No0014;
+     start=2025y022d13h09m34s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 1429.893 GB:   :       : 1;
+endscan;
+scan No0015;
+     start=2025y022d13h24m46s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 1545.830 GB:   :       : 1;
+endscan;
+scan No0016;
+     start=2025y022d13h39m58s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 1661.767 GB:   :       : 1;
+endscan;
+scan No0017;
+     start=2025y022d13h55m10s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 1777.705 GB:   :       : 1;
+endscan;
+scan No0018;
+     start=2025y022d14h10m22s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 1893.642 GB:   :       : 1;
+endscan;
+scan No0019;
+     start=2025y022d14h25m34s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 2009.579 GB:   :       : 1;
+endscan;
+scan No0020;
+     start=2025y022d14h40m46s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 2125.517 GB:   :       : 1;
+endscan;
+scan No0021;
+     start=2025y022d14h55m58s; mode=MIX_BAND1; source=R240114_D;
+*              :data_good:data_stop:goto_foot: pass:  wrap :driv:tape at
+     station=O8:    0 sec:  900 sec: 2241.454 GB:   :       : 1;
+endscan;
+scan No0022;
+     start=2025y022d15h11m10s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 2357.391 GB:   :       : 1;
+endscan;
+scan No0023;
+     start=2025y022d15h26m22s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 2473.328 GB:   :       : 1;
+endscan;
+scan No0024;
+     start=2025y022d15h41m34s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 2589.266 GB:   :       : 1;
+endscan;
+scan No0025;
+     start=2025y022d15h56m46s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 2705.203 GB:   :       : 1;
+endscan;
+scan No0026;
+     start=2025y022d16h11m58s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 2821.140 GB:   :       : 1;
+endscan;
+scan No0027;
+     start=2025y022d16h27m10s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 2937.077 GB:   :       : 1;
+endscan;
+scan No0028;
+     start=2025y022d16h42m22s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 3053.015 GB:   :       : 1;
+endscan;
+scan No0029;
+     start=2025y022d16h57m34s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 3168.952 GB:   :       : 1;
+endscan;
+scan No0030;
+     start=2025y022d17h12m46s; mode=MIX_BAND1; source=R240114_D;
+     station=O8:    0 sec:  900 sec: 3284.889 GB:   :       : 1;
+endscan;
+scan No0031;
+     start=2025y022d17h33m06s; mode=MIX_BAND1; source=B0329+54_D;
+     station=O8:    0 sec:  300 sec: 3400.826 GB:   :       : 1;
+endscan;
+scan No0032;
+     start=2025y022d17h39m41s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 3439.472 GB:   :       : 1;
+endscan;
+scan No0033;
+     start=2025y022d17h54m53s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 3555.409 GB:   :       : 1;
+endscan;
+scan No0034;
+     start=2025y022d18h10m05s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 3671.347 GB:   :       : 1;
+endscan;
+scan No0035;
+     start=2025y022d18h25m17s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 3787.284 GB:   :       : 1;
+endscan;
+scan No0036;
+     start=2025y022d18h40m29s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 3903.221 GB:   :       : 1;
+endscan;
+scan No0037;
+     start=2025y022d18h55m41s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 4019.158 GB:   :       : 1;
+endscan;
+scan No0038;
+     start=2025y022d19h10m53s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 4135.096 GB:   :       : 1;
+endscan;
+scan No0039;
+     start=2025y022d19h26m05s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 4251.033 GB:   :       : 1;
+endscan;
+scan No0040;
+     start=2025y022d19h41m17s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 4366.971 GB:   :       : 1;
+endscan;
+scan No0041;
+     start=2025y022d19h56m29s; mode=MIX_BAND1; source=R3_D;
+*              :data_good:data_stop:goto_foot: pass:  wrap :driv:tape at
+     station=O8:    0 sec:  900 sec: 4482.908 GB:   :       : 1;
+endscan;
+scan No0042;
+     start=2025y022d20h11m41s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 4598.846 GB:   :       : 1;
+endscan;
+scan No0043;
+     start=2025y022d20h26m53s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 4714.783 GB:   :       : 1;
+endscan;
+scan No0044;
+     start=2025y022d20h42m05s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 4830.721 GB:   :       : 1;
+endscan;
+scan No0045;
+     start=2025y022d20h57m17s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 4946.658 GB:   :       : 1;
+endscan;
+scan No0046;
+     start=2025y022d21h12m29s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 5062.596 GB:   :       : 1;
+endscan;
+scan No0047;
+     start=2025y022d21h27m41s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 5178.533 GB:   :       : 1;
+endscan;
+scan No0048;
+     start=2025y022d21h42m53s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 5294.471 GB:   :       : 1;
+endscan;
+scan No0049;
+     start=2025y022d21h58m05s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 5410.408 GB:   :       : 1;
+endscan;
+scan No0050;
+     start=2025y022d22h13m17s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 5526.346 GB:   :       : 1;
+endscan;
+scan No0051;
+     start=2025y022d22h28m29s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 5642.283 GB:   :       : 1;
+endscan;
+scan No0052;
+     start=2025y022d22h43m41s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 5758.221 GB:   :       : 1;
+endscan;
+scan No0053;
+     start=2025y022d22h58m53s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 5874.158 GB:   :       : 1;
+endscan;
+scan No0054;
+     start=2025y022d23h14m05s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 5990.096 GB:   :       : 1;
+endscan;
+scan No0055;
+     start=2025y022d23h29m17s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 6106.033 GB:   :       : 1;
+endscan;
+scan No0056;
+     start=2025y022d23h44m29s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 6221.971 GB:   :       : 1;
+endscan;
+scan No0057;
+     start=2025y022d23h59m41s; mode=MIX_BAND1; source=R3_D;
+     station=O8:    0 sec:  900 sec: 6337.908 GB:   :       : 1;
+endscan;
+scan No0058;
+     start=2025y023d00h16m16s; mode=MIX_BAND1; source=B0329+54_D;
+     station=O8:    0 sec:  600 sec: 6453.846 GB:   :       : 1;
+endscan;
+scan No0059;
+     start=2025y023d00h31m56s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 6531.137 GB:   :       : 1;
+endscan;
+scan No0060;
+     start=2025y023d00h47m08s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 6647.075 GB:   :       : 1;
+endscan;
+scan No0061;
+     start=2025y023d01h02m20s; mode=MIX_BAND1; source=R200120_D;
+*              :data_good:data_stop:goto_foot: pass:  wrap :driv:tape at
+     station=O8:    0 sec:  900 sec: 6763.012 GB:   :       : 1;
+endscan;
+scan No0062;
+     start=2025y023d01h17m32s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 6878.950 GB:   :       : 1;
+endscan;
+scan No0063;
+     start=2025y023d01h32m44s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 6994.887 GB:   :       : 1;
+endscan;
+scan No0064;
+     start=2025y023d01h47m56s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 7110.825 GB:   :       : 1;
+endscan;
+scan No0065;
+     start=2025y023d02h03m08s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 7226.762 GB:   :       : 1;
+endscan;
+scan No0066;
+     start=2025y023d02h18m20s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 7342.700 GB:   :       : 1;
+endscan;
+scan No0067;
+     start=2025y023d02h33m32s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 7458.637 GB:   :       : 1;
+endscan;
+scan No0068;
+     start=2025y023d02h48m44s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 7574.575 GB:   :       : 1;
+endscan;
+scan No0069;
+     start=2025y023d03h03m56s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 7690.512 GB:   :       : 1;
+endscan;
+scan No0070;
+     start=2025y023d03h19m08s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 7806.450 GB:   :       : 1;
+endscan;
+scan No0071;
+     start=2025y023d03h34m20s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 7922.387 GB:   :       : 1;
+endscan;
+scan No0072;
+     start=2025y023d03h49m32s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 8038.325 GB:   :       : 1;
+endscan;
+scan No0073;
+     start=2025y023d04h04m44s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 8154.262 GB:   :       : 1;
+endscan;
+scan No0074;
+     start=2025y023d04h19m56s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 8270.199 GB:   :       : 1;
+endscan;
+scan No0075;
+     start=2025y023d04h35m08s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 8386.137 GB:   :       : 1;
+endscan;
+scan No0076;
+     start=2025y023d04h50m20s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 8502.074 GB:   :       : 1;
+endscan;
+scan No0077;
+     start=2025y023d05h05m32s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 8618.012 GB:   :       : 1;
+endscan;
+scan No0078;
+     start=2025y023d05h20m44s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 8733.949 GB:   :       : 1;
+endscan;
+scan No0079;
+     start=2025y023d05h35m56s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 8849.887 GB:   :       : 1;
+endscan;
+scan No0080;
+     start=2025y023d05h51m08s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 8965.824 GB:   :       : 1;
+endscan;
+scan No0081;
+     start=2025y023d06h06m20s; mode=MIX_BAND1; source=R200120_D;
+*              :data_good:data_stop:goto_foot: pass:  wrap :driv:tape at
+     station=O8:    0 sec:  900 sec: 9081.762 GB:   :       : 1;
+endscan;
+scan No0082;
+     start=2025y023d06h21m32s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 9197.699 GB:   :       : 1;
+endscan;
+scan No0083;
+     start=2025y023d06h36m44s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 9313.637 GB:   :       : 1;
+endscan;
+scan No0084;
+     start=2025y023d06h51m56s; mode=MIX_BAND1; source=R200120_D;
+     station=O8:    0 sec:  900 sec: 9429.574 GB:   :       : 1;
+endscan;
+scan No0085;
+     start=2025y023d07h10m46s; mode=MIX_BAND1; source=B1133+16_D;
+     station=O8:    0 sec:  600 sec: 9545.512 GB:   :       : 1;
+endscan;

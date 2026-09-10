@@ -1,0 +1,141 @@
+# exp    dish scan band DM       direc                       middle cepoch filterbank
+# Band = L always
+# p47018   wb   24   L  527.7   p47018_24_wb_60369.37077  1.4    0.50   p47018_24_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47019   wb   21   L  527.7   p47019_21_wb_60370.29406  1.7    0.23   p47019_21_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47019   wb   33   L  527.7   p47019_33_wb_60370.42098  1.7    0.25   p47019_33_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47019   wb   36   L  527.7   p47019_36_wb_60370.45202  1.4    0.27   p47019_36_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47019   wb   37   L  527.7   p47019_37_wb_60370.45775  1.7    0.03   p47019_37_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47020   wb   19   L  527.7   p47020_19_wb_60373.28848  1      0.31   p47020_19_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47020   wb   25   L  527.7   p47020_25_wb_60373.35687  1.7    0.27   p47020_25_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47021   wb   11   L  527.7   p47021_11_wb_60375.42929  1.61   0.19   p47021_11_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47021   wb   13   L  527.7   p47021_13_wb_60375.44850  1.4    0.13   p47021_13_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47021   wb   13   L  527.7   p47021_13_wb_60375.45227  1.9    0.07   p47021_13_2_64us_125KHz_StokesI_DM5277.cor_Wb.fil D MULTI_BURST
+################# 10
+# p47021   wb   4    L  527.7   p47021_4_wb_60375.35196   1.4    0.5    p47021_4_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47021   wb   6    L  527.7   p47021_6_wb_60375.38288   2      0.4    p47021_6_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47021   wb   8    L  527.7   p47021_8_wb_60375.40089   1.8    0.12   p47021_8_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47021   wb   9    L  527.7   p47021_9_wb_60375.40484   1.5    0.48   p47021_9_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47031   wb   20   L  527.7   p47031_20_wb_60387.36718  1      0.29   p47031_20_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47031   wb   36   L  527.7   p47031_36_wb_60387.53333  1.8    0.01   p47031_36_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47057   wb   36   L  527.7   p47057_36_wb_60424.43375  1.8    0.12   p47057_36_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47065   wb   33   L  527.7   p47065_33_wb_60432.38560  1.3    0.02   p47065_33_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47066   wb   16   L  527.7   p47066_16_wb_60433.20360  1.2    0.39   p47066_16_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47085   wb   11   L  527.7   p47085_11_wb_60453.09210  1      0.25   p47085_11_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+################# 20
+# p55084   wb   34   L  527.7   p55084_34_wb_60573.92099  1.8    0.13   p55084_34_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55092   wb   32   L  527.7   p55092_32_wb_60581.87251  1.9    0.42   p55092_32_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55097   wb   41   L  528.4   p55097_41_wb_60586.95300  1.1    0.28   p55097_41_64us_125KHz_StokesI_DM5284.cor_Wb.fil D
+# p55158   wb   47   L  527.7   p55158_47_wb_60658.72064  1.3    0.22   p55158_47_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55173   wb   40   L  527.7   p55173_40_wb_60673.60990  1.8    0.37   p55173_40_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55179   wb   40   L  527.7   p55179_40_wb_60679.59050  1.3    0.25   p55179_40_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55179   wb   44   L  527.7   p55179_44_wb_60679.63683  1.8    0.38   p55179_44_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55179   wb   47   L  527.7   p55179_47_wb_60679.67225  1.2    0.47   p55179_47_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55179   wb   51   L  527.7   p55179_51_wb_60679.71107  1      0.47   p55179_51_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55179   wb   51   L  527.7   p55179_51_wb_60679.71465  1.61    0.15  p55179_51_2_64us_125KHz_StokesI_DM5277.cor_Wb.fil D MULTI_BURST
+################# 30
+# p55179   wb   54   L  527.7   p55179_54_wb_60679.74590  1.7    0.15   p55179_54_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55182   wb   55   L  527.7   p55182_55_wb_60682.74005  1      0.35   p55182_55_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55183   wb   50   L  527.7   p55183_50_wb_60683.68580  1.7    0.13   p55183_50_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55186   wb   8    L  527.7   p55186_8_wb_60686.62064   1.61   0.12   p55186_8_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55195   wb   29   L  527.7   p55195_29_wb_60696.41322  1.61   0.01   p55195_29_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55197   wb   42   L  527.7   p55197_42_wb_60698.53843  1.4    0.09   p55197_42_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55293   wb   11   L  527.7   p55293_11_wb_60809.31930  2.05   0.33   p55293_11_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p55299   wb   125  L  527.7   p55299_125_wb_60816.33178 1.2    0.4    p55299_125_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# pcn254   wb   12   L  527.7   pcn254_12_wb_60355.64417  2      0.35   pcn254_12_64us_125KHz_StokesI_DM5277.cor_Wb.fil D
+# p47024   o8   24   L  527.7   p47024_24_o8_60380.45214  1.9    0.40   p47024_24_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+################# 40
+# p47024   o8   26   L  527.7   p47024_26_o8_60380.47045  1.8    0.50   p47024_26_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47024   o8   32   L  527.7   p47024_32_o8_60380.52696  1.5    0.46   p47024_32_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47024   o8   32   L  527.7   p47024_32_o8_60380.52935  1.4    0.40   p47024_32_2_64us_125KHz_StokesI_DM5277.cor_O8.fil D MULTI BURST
+# p47024   o8   34   L  527.7   p47024_34_o8_60380.55016  1.7    0.33   p47024_34_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47024   o8   34   L  527.7   p47024_34_o8_60380.55492  1.4    0.42   p47024_34_2_64us_125KHz_StokesI_DM5277.cor_O8.fil D MULTI BURST
+# p47024   o8   35   L  527.7   p47024_35_o8_60380.56328  1.61    0.22   p47024_35_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+ p47024   o8   38   L  527.7   p47024_38_o8_60380.59622  1.4    0.17   p47024_38_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47024   o8   3    L  527.7   p47024_3_o8_60380.22753   1.7    0.20   p47024_3_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47024   o8   8    L  527.7   p47024_8_o8_60380.27610   1.8    0.43   p47024_8_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   11   L  527.7   p47025_11_o8_60381.28667  1.3    0.0   p47025_11_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+################# 50
+# p47025   o8   13   L  527.7   p47025_13_o8_60381.30441  1.0      0.25   p47025_13_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   14   L  527.7   p47025_14_o8_60381.31663  1.5    0.0   p47025_14_64us_125KHz_StokesI_DM5277.cor_O8.fil D-toweak
+# p47025   o8   16   L  527.7   p47025_16_o8_60381.33594  2      0.0   p47025_16_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   22   L  527.7   p47025_22_o8_60381.40647  1.8    0.01   p47025_22_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   24   L  527.7   p47025_24_o8_60381.41955  2      0.39   p47025_24_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   26   L  527.7   p47025_26_o8_60381.44031  1.9    0.13   p47025_26_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   26   L  527.7   p47025_26_o8_60381.44565  1.3    0.18   p47025_26_2_64us_125KHz_StokesI_DM5277.cor_O8.fil D MULTI BURST
+# p47025   o8   27   L  527.7   p47025_27_o8_60381.44972  1.2    0.27   p47025_27_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   29   L  527.7   p47025_29_o8_60381.47198  1.1    0.12   p47025_29_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   2    L  527.7   p47025_2_o8_60381.19497   1.4    0.2   p47025_2_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+################# 60
+# p47025   o8   30   L  527.7   p47025_30_o8_60381.48761  1.7    0.11   p47025_30_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   34   L  527.7   p47025_34_o8_60381.52857  1.2    0.18   p47025_34_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   36   L  527.7   p47025_36_o8_60381.54555  1.4    0.40   p47025_36_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   42   L  527.7   p47025_42_o8_60381.61002  1.8    0.27   p47025_42_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   4    L  527.7   p47025_4_o8_60381.20674   1.7    0.37   p47025_4_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   5    L  527.7   p47025_5_o8_60381.21916   1.2    0.2   p47025_5_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   8    L  527.7   p47025_8_o8_60381.25477   1.3    0.16   p47025_8_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47025   o8   9    L  527.7   p47025_9_o8_60381.26480   1.8    0.07   p47025_9_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47026   o8   13   L  527.7   p47026_13_o8_60382.30821  1.4    0.35   p47026_13_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47026   o8   16   L  527.7   p47026_16_o8_60382.33875  1.3    0.0   p47026_16_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+################# 70
+# p47026   o8   19   L  527.7   p47026_19_o8_60382.36677  1.5    0.12   p47026_19_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47026   o8   21   L  527.7   p47026_21_o8_60382.38751  2      0.03   p47026_21_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47026   o8   28   L  527.7   p47026_28_o8_60382.45980  1.4    0.08   p47026_28_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47026   o8   40   L  527.7   p47026_40_o8_60382.58602  1.4    0.44   p47026_40_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47026   o8   4    L  527.7   p47026_4_o8_60382.21357   1.4    0.13   p47026_4_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47026   o8   5    L  527.7   p47026_5_o8_60382.21510   1.9    0.0   p47026_5_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47026   o8   6    L  527.7   p47026_6_o8_60382.22576   1.61    0.0   p47026_6_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47027   o8   10   L  527.7   p47027_10_o8_60383.26844  1.5    0.12   p47027_10_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47027   o8   18   L  527.7   p47027_18_o8_60383.35377  1.61    0.17   p47027_18_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47028   o8   24   L  527.7   p47028_24_o8_60384.41118  2      0.21   p47028_24_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+################# 80
+# p47030   o8   23   L  527.7   p47030_23_o8_60386.39685  1      0.02   p47030_23_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47030   o8   31   L  527.7   p47030_31_o8_60386.48574  1.4    0.05   p47030_31_64us_125KHz_StokesI_DM5277.cor_O8.fil D 
+# p47030   o8   39   L  527.7   p47030_39_o8_60386.56761  1.9    0.42   p47030_39_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47038   o8   43   L  527.7   p47038_43_o8_60394.58687  1.9    0.48   p47038_43_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47064   o8   38   L  527.7   p47064_38_o8_60431.43777  1.7    0.18   p47064_38_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p47068   o8   29   L  527.7   p47068_29_o8_60435.32807  1.9    0.33   p47068_29_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# p49035   o8   27   L  527.7   p49035_27_o8_60697.68941  1.2    0.05   p49035_27_64us_125KHz_StokesI_DM5277.cor_O8.fil D
+# rn1l10   tr   11   L  527.7   rn1l10_11_tr_60380.43195  1.4    0.13   rn1l10_11_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l10   tr   13   L  527.7   rn1l10_13_tr_60380.44477  1.61    0.50   rn1l10_13_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l10   tr   15   L  527.7   rn1l10_15_tr_60380.46309  1.2    0.44   rn1l10_15_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+################# 90
+# rn1l10   tr   16   L  527.7   rn1l10_16_tr_60380.47045  1.8    0.0   rn1l10_16_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l10   tr   22   L  527.7   rn1l10_22_tr_60380.52696  1.5    0.46   rn1l10_22_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l10   tr   23   L  527.7   rn1l10_23_tr_60380.52935  1.5    0.40   rn1l10_23_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l10   tr   7    L  527.7   rn1l10_7_tr_60380.39698   1.7    0.50   rn1l10_7_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l11   tr   13   L  527.7   rn1l11_13_tr_60381.44031  2.05    0.13   rn1l11_13_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l11   tr   14   L  527.7   rn1l11_14_tr_60381.44569  1.1    0.0   rn1l11_14_64us_125KHz_StokesI_DM5277.cor_Tr.fil D-to weak!
+# rn1l11   tr   14   L  527.7   rn1l11_14_tr_60381.44972  1.2    0.3   rn1l11_14_2_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l11   tr   17   L  527.7   rn1l11_17_tr_60381.47198  1.1    0.2   rn1l11_17_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l11   tr   23   L  527.7   rn1l11_23_tr_60381.52857  1.2    0.2   rn1l11_23_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l12   tr   4    L  527.7   rn1l12_4_tr_60387.36717   1.7    0.0   rn1l12_4_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+################# 100
+# rn1l13   tr   20   L  527.7   rn1l13_20_tr_60398.43767  1.9    0.05   rn1l13_20_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l33   tr   10   L  527.7   rn1l33_10_tr_60563.95120  1.4    0.23   rn1l33_10_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l40   tr   17   L  527.7   rn1l40_17_tr_60586.95300  0.8    0.0   rn1l40_17_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l58   tr   23   L  527.7   rn1l58_23_tr_60654.79400  1      0.46   rn1l58_23_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l59   tr   16   L  527.7   rn1l59_16_tr_60658.72064  1      0.46   rn1l59_16_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l62   tr   14   L  527.7   rn1l62_14_tr_60674.67263  1.7    0.08   rn1l62_14_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l64   tr   15   L  527.7   rn1l64_15_tr_60681.66917  1.61    0.1   rn1l64_15_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l64   tr   4    L  527.7   rn1l64_4_tr_60681.57453   1.5    0.30   rn1l64_4_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l65   tr   10   L  527.7   rn1l65_10_tr_60683.62494  1.4    0.43   rn1l65_10_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l65   tr   14   L  527.7   rn1l65_14_tr_60683.65484  2.1    0.2   rn1l65_14_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+################# 110
+# rn1l65   tr   1    L  527.7   rn1l65_1_tr_60683.54646   1.61    0.12   rn1l65_1_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l65   tr   6    L  527.7   rn1l65_6_tr_60683.58874   1.7    0.37   rn1l65_6_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l66   tr   11   L  527.7   rn1l66_11_tr_60684.61054  1.3    0.37   rn1l66_11_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l67   tr   14   L  527.7   rn1l67_14_tr_60686.62064  1.3    0.37   rn1l67_14_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l70   tr   7    L  527.7   rn1l70_7_tr_60698.53843   1.2    0.33   rn1l70_7_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l81   tr   16   L  527.7   rn1l81_16_tr_60795.31636  1.3    0.03   rn1l81_16_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l81   tr   21   L  527.7   rn1l81_21_tr_60795.36233  1.5    0.18   rn1l81_21_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l82   tr   20   L  527.7   rn1l82_20_tr_60798.35714  1.2    0.07   rn1l82_20_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l83   tr   7    L  527.7   rn1l83_7_tr_60803.22021   1.8    0.05   rn1l83_7_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l84   tr   14   L  527.7   rn1l84_14_tr_60805.28389  1.4    0.13   rn1l84_14_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+################# 120
+# rn1l84   tr   15   L  527.7   rn1l84_15_tr_60805.29069  2      0.04   rn1l84_15_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l87   tr   5    L  527.7   rn1l87_5_tr_60812.20948   1.2    0.05   rn1l87_5_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l89   tr   2    L  527.7   rn1l89_2_tr_60816.17650   1.61    0.25   rn1l89_2_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+# rn1l90   tr   22   L  527.7   rn1l90_22_tr_60819.33109  1.1    0.42   rn1l90_22_64us_125KHz_StokesI_DM5277.cor_Tr.fil D
+################# Pband - added manually
+# p47030   wb   21   P  527.7   p47030_21_wb_60386.37678  2.0    0.65   p47030_21_256us_32KHz_StokesI_DM5277.cor_Wb.fil D
+# pcn242   wb   23   P  527.7   pcn242_23_wb_60341.53821  2.58   0.33  pcn242_23_256us_32KHz_StokesI_DM5277.cor_Wb.fil D

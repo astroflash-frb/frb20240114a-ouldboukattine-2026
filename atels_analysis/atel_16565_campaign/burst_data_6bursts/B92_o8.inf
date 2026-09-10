@@ -1,0 +1,27 @@
+ Data file name without suffix          =  B92_o8
+ Telescope used                         =  Fake
+ Instrument used                        =  unset
+ Object being observed                  =  R240114
+ J2000 Right Ascension (hh:mm:ss.ssss)  =  21:27:39.8367
+ J2000 Declination     (dd:mm:ss.ssss)  =  04:19:46.2333
+ Data observed by                       =  unset
+ Epoch of observation (MJD)             =  60382.459768518521741
+ Barycentered?           (1 yes, 0 no)  =  0
+ Number of bins in the time series      =  39200      
+ Width of each time series bin (sec)    =  0.000128
+ Any breaks in the data? (1 yes, 0 no)  =  1
+ On/Off bin pair #  1                   =  0          , 38399      
+ On/Off bin pair #  2                   =  39199      , 39199      
+ Type of observation (EM band)          =  Radio
+ Beam diameter (arcsec)                 =  3600
+ Dispersion measure (cm-3 pc)           =  527.8
+ Central freq of low channel (MHz)      =  1360.125
+ Total bandwidth (MHz)                  =  128
+ Number of channels                     =  512
+ Channel bandwidth (MHz)                =  0.25
+ Data analyzed by                       =  omar
+ Any additional notes:
+    Project ID unset, Date: 2024-03-13T11:02:04.
+    2 polns were summed.  Samples have 8 bits.
+
+

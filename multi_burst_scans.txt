@@ -1,0 +1,16 @@
+Scans with multiple bursts per telescope
+Generated: Mon Dec 15 02:45:06 PM UTC 2025
+
+TELESCOPE: onsala
+p47024_o8_no0032 : 2 bursts - done - sfxcdone
+p47024_o8_no0034 : 2 bursts - done - sfxcdone
+p47025_o8_no0026 : 2 bursts - done - sfxcdone
+
+TELESCOPE: torun
+rn1l11_tr_no0014 : 2 bursts - done 
+rn1l12_tr_no0004 : 2 bursts - this is the same burst - done
+
+TELESCOPE: westerbork
+p47021_wb_no0013 : 2 bursts - done - sfxcdone
+p55179_wb_no0051 : 2 bursts - done - sfxcdone
+

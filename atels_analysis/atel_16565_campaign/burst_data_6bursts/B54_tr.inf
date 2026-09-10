@@ -1,0 +1,27 @@
+ Data file name without suffix          =  B54_tr
+ Telescope used                         =  Fake
+ Instrument used                        =  unset
+ Object being observed                  =  R240121
+ J2000 Right Ascension (hh:mm:ss.ssss)  =  21:27:40.0000
+ J2000 Declination     (dd:mm:ss.ssss)  =  04:19:46.0000
+ Data observed by                       =  unset
+ Epoch of observation (MJD)             =  60380.431944444440887
+ Barycentered?           (1 yes, 0 no)  =  0
+ Number of bins in the time series      =  15680      
+ Width of each time series bin (sec)    =  0.000128
+ Any breaks in the data? (1 yes, 0 no)  =  1
+ On/Off bin pair #  1                   =  0          , 14399      
+ On/Off bin pair #  2                   =  15679      , 15679      
+ Type of observation (EM band)          =  Radio
+ Beam diameter (arcsec)                 =  3600
+ Dispersion measure (cm-3 pc)           =  527.8
+ Central freq of low channel (MHz)      =  1350.0625
+ Total bandwidth (MHz)                  =  128
+ Number of channels                     =  1024
+ Channel bandwidth (MHz)                =  0.125
+ Data analyzed by                       =  omar
+ Any additional notes:
+    Project ID unset, Date: 2024-03-11T10:21:60.
+    2 polns were summed.  Samples have 8 bits.
+
+

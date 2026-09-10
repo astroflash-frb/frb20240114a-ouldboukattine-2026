@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+VBS_BASE="/home/omar/git/r147-single-dish-analysis/vbs_data"
+
+declare -A INPUT_DIRS
+INPUT_DIRS["westerbork"]="/scratch1/baseband_extractions/r147/westerbork"
+INPUT_DIRS["onsala"]="/scratch1/baseband_extractions/r147/onsala"
+INPUT_DIRS["torun"]="/scratch1/baseband_extractions/r147/torun"
+
+MULTI_BURST_REPORT="${VBS_BASE}/multi_burst_scans.txt"
+mkdir -p "$VBS_BASE"
+
+echo "Scans with multiple bursts per telescope" > "$MULTI_BURST_REPORT"
+echo "Generated: $(date)" >> "$MULTI_BURST_REPORT"
+echo "" >> "$MULTI_BURST_REPORT"
+
+# associative array to count bursts per scan key
+declare -A SCAN_COUNTS
+declare -A SCAN_FILES
+
+for tel in "${!INPUT_DIRS[@]}"; do
+    INPUT_DIR="${INPUT_DIRS[$tel]}"
+    echo "Scanning input directory: ${INPUT_DIR} (telescope: $tel)"
+    echo "TELESCOPE: $tel" >> "$MULTI_BURST_REPORT"
+
+    # reset per-telescope counters
+    SCAN_COUNTS=()
+    SCAN_FILES=()
+
+    for file in "$INPUT_DIR"/p* "$INPUT_DIR"/rn*; do
+        [ -e "$file" ] || continue
+        filename=$(basename "$file")
+
+        # Parse filename:
+        # rn1l62_tr_no0014_60674.67263479_plus-minus_10.0_seconds
+        obs_code=$(echo "$filename" | cut -d'_' -f1)
+        station=$(echo "$filename" | cut -d'_' -f2)
+        scan=$(echo "$filename" | cut -d'_' -f3)
+
+        scan_key="${obs_code}_${station}_${scan}"
+
+        # increment burst counter for this scan
+        SCAN_COUNTS["$scan_key"]=$(( ${SCAN_COUNTS["$scan_key"]:-0} + 1 ))
+        count=${SCAN_COUNTS["$scan_key"]}
+
+        # create obs_code directory
+        target_dir="${VBS_BASE}/${obs_code}"
+        mkdir -p "$target_dir"
+
+        # determine symlink name
+        if [ "$count" -eq 1 ]; then
+            link_name="${scan_key}"
+        else
+            link_name=$(printf "%s_%02d" "$scan_key" "$count")
+        fi
+
+        ln -sf "$file" "${target_dir}/${link_name}"
+
+        # store for reporting
+        SCAN_FILES["$scan_key"]="$count"
+    done
+
+    # report multiple bursts
+    found_multi=false
+    for key in "${!SCAN_FILES[@]}"; do
+        if [ "${SCAN_FILES[$key]}" -gt 1 ]; then
+            echo "${key} : ${SCAN_FILES[$key]} bursts" >> "$MULTI_BURST_REPORT"
+            found_multi=true
+        fi
+    done
+
+    if [ "$found_multi" = false ]; then
+        echo "No multiple bursts in this telescope" >> "$MULTI_BURST_REPORT"
+    fi
+
+    echo "" >> "$MULTI_BURST_REPORT"
+done
+
+echo "Done."
+echo "Symlinks in ${VBS_BASE}/<obs_code>/"
+echo "Multi-burst report: ${MULTI_BURST_REPORT}"
+
